@@ -1,0 +1,41 @@
+image: node:latest
+
+stages:
+  - deploy
+
+deploy:qa:
+  stage: deploy
+  # variables:
+  #   ME_CONFIG_MONGODB_ADMINUSERNAME: root
+  #   ME_CONFIG_MONGODB_ADMINPASSWORD: root
+  #   MONGO_INITDB_ROOT_USERNAME: root
+  #   MONGO_INITDB_ROOT_PASSWORD: root
+  # services:
+  #   - name: mongo:4.2.2
+  #     alias: mongodb
+
+  before_script:
+    - echo $MONGO_CONNECTION_QA
+    - npm config set prefix /usr/local
+    - npm install -g serverless
+    - npm install --save
+    # - npm run test
+  script:
+    - serverless deploy --stage qa --verbose
+  environment: qa
+  only:
+    refs:
+      - develop
+
+deploy:prod:
+  stage: deploy
+  before_script:
+    - npm config set prefix /usr/local
+    - npm install -g serverless
+    - npm install --save
+  script:
+    - serverless deploy --stage prod --verbose
+  environment: prod
+  only:
+    refs:
+      - master

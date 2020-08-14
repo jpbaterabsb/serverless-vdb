@@ -1,0 +1,31 @@
+export default {
+  name: 'Vem de bolo',
+  cnpj: '11111112155555',
+  email: 'vemdebolo@gmail.com',
+  phoneNumber: '61982028242',
+  password: 'Vem@1234',
+  companyName: 'Vem de bolo teste',
+  address: {
+    state: 'DF',
+    number: '48',
+    complement: 'R. 7 Q 3 Conjunto G',
+    zipcode: '73030030',
+    city: 'Brasília',
+    streetName: '',
+    geopoint: {
+      altitude: 1035.699951171875,
+      heading: 128.4254150390625,
+      longitude: -47.8125666,
+      speed: 0.011352206580340862,
+      latitude: -15.6537038,
+      accuracy: 14.642999649047852,
+    },
+  },
+  deliveryType: 1,
+  range: 25,
+  openingHours: {
+    start: 540,
+    end: 900,
+  },
+  profileImageUrl: 'https://vem-de-bolo-dev.s3.amazonaws.com/upload/profile_photo/5ef13325aa723d000907fcba',
+};

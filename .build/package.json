@@ -1,0 +1,49 @@
+{
+  "name": "poc-service",
+  "version": "1.0.0",
+  "description": "Serverless webpack example using Typescript",
+  "main": "handler.js",
+  "scripts": {
+    "test": "mocha -r ts-node/register __tests__/*.spec.ts",
+    "start": "nodemon ./node_modules/.bin/serverless offline --skipCacheInvalidation",
+    "start:alt": "nodemon --exec serverless offline --skipCacheInvalidation"
+  },
+  "dependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/express": "^4.17.6",
+    "@types/http-errors": "^1.6.3",
+    "@types/mongoose": "^5.7.21",
+    "aws-sdk": "^2.652.0",
+    "express": "^4.17.1",
+    "express-async-handler": "^1.1.4",
+    "mongoose": "^5.9.15",
+    "serverless-http": "^2.3.2",
+    "source-map-support": "^0.5.10",
+    "uuid-random": "^1.3.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/chai": "^4.2.11",
+    "@types/jest": "^25.2.3",
+    "@types/mocha": "^7.0.2",
+    "@types/node": "^10.12.18",
+    "chai": "^4.2.0",
+    "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "jest": "^26.0.1",
+    "mocha": "^7.2.0",
+    "nodemon": "^2.0.4",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-export-env": "^1.3.1",
+    "serverless-mocha-plugin": "^1.12.0",
+    "serverless-offline": "^6.1.4",
+    "serverless-plugin-typescript": "^1.1.9",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^5.3.3",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3",
+    "webpack": "^4.29.0",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "author": "The serverless webpack authors (https://github.com/elastic-coders/serverless-webpack)",
+  "license": "MIT"
+}
